@@ -3,9 +3,8 @@ require 'sinatra/base'
 class App < Sinatra::Base
 
    get '/:newteam' do
-     erb params[:newteam].to_sym
+     erb params[:newteam]
    end
-
 
    post '/team' do
       @name = params[:name]
