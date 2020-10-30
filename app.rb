@@ -6,9 +6,17 @@ class App < Sinatra::Base
      erb params[:newteam].to_sym
    end
 
-   post '/:team' do
-    @results =  erb params[:newteam]
-    @results
-   end
+
+   post '/team' do
+      @name = params[:name]
+      @coach = params[:coach]
+      @pg = params[:pg]
+      @sg = params[:sg]
+      @pf = params[:pf]
+      @sf = params[:sf]
+      @c = params[:c]
+      erb :team
+  end
+
 
 end
